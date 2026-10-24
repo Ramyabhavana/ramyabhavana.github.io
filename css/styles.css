@@ -1,89 +1,79 @@
 /* ==========================================================================
-   Ramya Bhavana - Portfolio Stylesheet (SAP Signature Theme & SAP GUI Design)
+   Ramya Bhavana - Minimalist Monochrome (Black & Grey Palette)
+   Strictly Black, White, Charcoal, Silver and Greys - No Other Colours
    ========================================================================== */
 
-:root, [data-theme="signature"] {
-  /* SAP Signature Theme (Iconic SAP GUI Palette) */
-  --sap-blue-dark: #002b49;        /* Deep SAP Top Header Blue */
-  --sap-blue-primary: #00385f;     /* SAP Signature Primary Blue */
-  --sap-blue-medium: #005691;      /* Interactive Blue */
-  --sap-blue-light: #0070ba;       /* Highlight Blue */
-  --sap-blue-ice: #eaf1f7;         /* Ice blue panel tint */
+:root, [data-theme="dark"] {
+  /* Dark Mode Palette (Default) */
+  --bg-primary: #09090b;          /* Deepest Obsidian Black */
+  --bg-secondary: #121215;        /* Charcoal Background */
+  --bg-card: #18181b;             /* Matte Charcoal Card */
+  --bg-card-hover: #202024;       /* Card Hover */
+  --bg-pill: #27272a;             /* Pill / Tag Background */
   
-  --sap-gold: #f0ab00;             /* Iconic SAP Gold / Amber */
-  --sap-gold-hover: #d49700;
-  --sap-gold-light: #fff8e6;
+  --border-color: #27272a;        /* Subtle Grey Border */
+  --border-highlight: #52525b;    /* Active / Focus Border */
+  --border-light: #3f3f46;        /* Structural Border */
   
-  --bg-primary: #eef3f8;           /* Classic SAP GUI Workspace Background */
-  --bg-secondary: #e2eaf2;         /* Window Frame Canvas */
-  --bg-card: #ffffff;              /* Crisp White Enterprise Cards */
-  --bg-card-header: #00385f;       /* SAP Window Header Blue */
-  --bg-card-hover: #fcfdfe;
+  --text-primary: #ffffff;        /* Pure Crisp White */
+  --text-secondary: #a1a1aa;      /* Neutral Grey */
+  --text-muted: #71717a;          /* Muted Silver Grey */
   
-  --border-color: #c5d5e5;         /* SAP GUI Frame & Field Borders */
-  --border-highlight: #0070ba;
+  --accent-primary: #ffffff;      /* High-contrast White */
+  --accent-secondary: #d4d4d8;    /* Silver */
   
-  --text-primary: #111f2c;         /* Deep Enterprise Slate */
-  --text-secondary: #3b5166;       /* Subtext Slate */
-  --text-muted: #647b91;
-  --text-on-blue: #ffffff;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --btn-primary-hover: #e4e4e7;
   
-  --accent-primary: #005691;
-  --accent-secondary: #f0ab00;
-  --accent-gradient: linear-gradient(135deg, #002b49 0%, #00385f 50%, #005691 100%);
-  --sap-gold-gradient: linear-gradient(135deg, #f0ab00 0%, #d49700 100%);
-  --accent-glow: rgba(0, 86, 145, 0.08);
+  --btn-secondary-bg: #27272a;
+  --btn-secondary-text: #ffffff;
+  --btn-secondary-hover: #3f3f46;
   
-  --card-shadow: 0 4px 16px rgba(0, 43, 73, 0.08), 0 1px 3px rgba(0, 43, 73, 0.05);
-  --nav-backdrop: #002b49;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --nav-backdrop: rgba(9, 9, 11, 0.88);
   
-  --radius-xs: 3px;
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
   --radius-full: 9999px;
   
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Space Grotesk', var(--font-main);
-  --font-mono: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
   
   --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme="dark"] {
-  /* SAP Horizon / Belize Dark Mode */
-  --sap-blue-dark: #121820;
-  --sap-blue-primary: #172230;
-  --sap-blue-medium: #1b75d0;
-  --sap-blue-light: #479eeb;
-  --sap-blue-ice: rgba(27, 117, 208, 0.12);
+[data-theme="light"] {
+  /* Light Mode Palette (Crisp Monochrome) */
+  --bg-primary: #f4f4f5;          /* Off-white / Silver canvas */
+  --bg-secondary: #ffffff;        /* Crisp White */
+  --bg-card: #ffffff;             /* Pure White Card */
+  --bg-card-hover: #fafafa;
+  --bg-pill: #e4e4e7;
   
-  --sap-gold: #ffae00;
-  --sap-gold-hover: #ffbf33;
-  --sap-gold-light: rgba(255, 174, 0, 0.15);
+  --border-color: #e4e4e7;
+  --border-highlight: #a1a1aa;
+  --border-light: #d4d4d8;
   
-  --bg-primary: #0e131a;
-  --bg-secondary: #161e29;
-  --bg-card: #1c2635;
-  --bg-card-header: #131b26;
-  --bg-card-hover: #222e40;
+  --text-primary: #09090b;        /* Pure Black */
+  --text-secondary: #52525b;      /* Slate Grey */
+  --text-muted: #71717a;
   
-  --border-color: rgba(255, 255, 255, 0.1);
-  --border-highlight: #1b75d0;
+  --accent-primary: #09090b;
+  --accent-secondary: #27272a;
   
-  --text-primary: #f0f4f8;
-  --text-secondary: #a2b4c7;
-  --text-muted: #74889e;
-  --text-on-blue: #ffffff;
+  --btn-primary-bg: #09090b;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #27272a;
   
-  --accent-primary: #1b75d0;
-  --accent-secondary: #ffae00;
-  --accent-gradient: linear-gradient(135deg, #1b75d0 0%, #3895e8 100%);
-  --sap-gold-gradient: linear-gradient(135deg, #ffae00 0%, #e69d00 100%);
-  --accent-glow: rgba(27, 117, 208, 0.15);
+  --btn-secondary-bg: #f4f4f5;
+  --btn-secondary-text: #09090b;
+  --btn-secondary-hover: #e4e4e7;
   
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  --nav-backdrop: #121820;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --nav-backdrop: rgba(244, 244, 245, 0.88);
 }
 
 /* Base & Reset */
@@ -103,9 +93,8 @@ html {
 
 body {
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
   min-height: 100vh;
-  padding-bottom: 34px; /* Space for SAP bottom status bar */
 }
 
 .container {
@@ -132,154 +121,29 @@ button {
   transition: var(--transition);
 }
 
-/* ==========================================================================
-   SAP GUI Top System Bar & Command Field
-   ========================================================================== */
-.sap-system-bar {
-  background: #001f35;
-  color: #c9d7e5;
-  font-size: 0.8rem;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 102;
-}
-
-.system-bar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.sap-sys-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.sap-logo-badge {
-  background: var(--sap-gold);
-  color: #002b49;
-  font-weight: 900;
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  letter-spacing: 1px;
-  padding: 1px 7px;
-  border-radius: var(--radius-xs);
-  display: inline-block;
-}
-
-.sap-sys-tag {
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.sap-divider {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.sap-sys-text {
-  color: #8da4bc;
-  font-size: 0.75rem;
-}
-
-/* Command Bar */
-.sap-command-bar {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #758ea6;
-  border-radius: var(--radius-xs);
-  padding: 2px 6px;
-  flex-grow: 1;
-  max-width: 440px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.command-prefix {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: #00385f;
-  font-size: 0.82rem;
-  margin-right: 4px;
-}
-
-.command-input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: #111f2c;
-  background: transparent;
-}
-
-.command-input::placeholder {
-  color: #889bb0;
-  font-family: var(--font-main);
-  font-size: 0.78rem;
-}
-
-.command-go-btn {
-  color: #00385f;
-  display: flex;
-  align-items: center;
-  padding: 2px;
-}
-
-.command-go-btn svg {
-  width: 14px;
-  height: 14px;
-}
-
-.command-go-btn:hover {
-  color: var(--sap-gold);
-}
-
-/* Quick T-Code chips */
-.tcode-quick-chips {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.tcode-chip {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #e0ebf5;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: var(--radius-xs);
-  transition: var(--transition);
-}
-
-.tcode-chip:hover {
-  background: var(--sap-gold);
-  color: #002b49;
-  border-color: var(--sap-gold);
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* ==========================================================================
-   Header & Navigation (SAP Signature Blue & Gold Bar)
+   Header & Navigation (Clean, Minimalist, Single Bar)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   background: var(--nav-backdrop);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 68px;
 }
 
 .brand-logo {
@@ -289,18 +153,17 @@ button {
 }
 
 .logo-badge {
-  width: 38px;
-  height: 38px;
-  background: var(--sap-gold);
-  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-family: var(--font-display);
-  color: #002b49;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 0.95rem;
 }
 
 .logo-text {
@@ -311,42 +174,49 @@ button {
 .logo-name {
   font-weight: 700;
   font-size: 1.05rem;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
 .logo-role {
   font-size: 0.72rem;
-  color: #9cb3cc;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 .nav-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.88rem;
-  color: #c9d7e5;
-  padding: 6px 12px;
-  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+  padding: 6px 0;
+  position: relative;
   transition: var(--transition);
-}
-
-.nav-link svg {
-  width: 14px;
-  height: 14px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-actions {
@@ -355,42 +225,33 @@ button {
   gap: 10px;
 }
 
-/* SAP Signature Iconic Gold Accent Line */
-.sap-gold-line {
-  height: 3px;
-  background: var(--sap-gold);
-  width: 100%;
-}
-
 .theme-toggle-btn {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #c9d7e5;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
 }
 
 .theme-toggle-btn:hover {
-  color: var(--sap-gold);
-  border-color: var(--sap-gold);
+  color: var(--text-primary);
+  border-color: var(--border-highlight);
 }
 
 [data-theme="dark"] .sun-icon { display: block; }
 [data-theme="dark"] .moon-icon { display: none; }
-[data-theme="signature"] .sun-icon { display: none; }
-[data-theme="signature"] .moon-icon { display: block; }
-:root:not([data-theme="dark"]) .sun-icon { display: none; }
-:root:not([data-theme="dark"]) .moon-icon { display: block; }
+[data-theme="light"] .sun-icon { display: none; }
+[data-theme="light"] .moon-icon { display: block; }
 
 .mobile-toggle {
   display: none;
   width: 36px;
   height: 36px;
-  color: #ffffff;
+  color: var(--text-primary);
   align-items: center;
   justify-content: center;
 }
@@ -400,7 +261,7 @@ button {
 .mobile-toggle.is-open .close-icon { display: block; }
 
 /* ==========================================================================
-   Buttons
+   Buttons (High Contrast Monochrome)
    ========================================================================== */
 .btn {
   display: inline-flex;
@@ -410,13 +271,13 @@ button {
   font-weight: 600;
   border-radius: var(--radius-xs);
   padding: 9px 20px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   transition: var(--transition);
   white-space: nowrap;
 }
 
 .btn-sm {
-  padding: 5px 14px;
+  padding: 6px 14px;
   font-size: 0.82rem;
 }
 
@@ -426,58 +287,56 @@ button {
 }
 
 .btn-primary {
-  background: var(--sap-gold);
-  color: #002b49;
-  font-weight: 700;
-  border: 1px solid #d49700;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 1px solid var(--btn-primary-bg);
 }
 
 .btn-primary:hover {
-  background: var(--sap-gold-hover);
-  color: #002b49;
+  background: var(--btn-primary-hover);
+  color: var(--btn-primary-text);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: var(--sap-blue-primary);
-  color: #ffffff;
-  border: 1px solid #002b49;
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--border-light);
 }
 
 .btn-secondary:hover {
-  background: var(--sap-blue-medium);
-  color: #ffffff;
+  background: var(--btn-secondary-hover);
+  border-color: var(--border-highlight);
   transform: translateY(-1px);
 }
 
 .btn-outline {
-  border: 1px solid var(--border-color);
+  background: transparent;
   color: var(--text-primary);
-  background: var(--bg-card);
+  border: 1px solid var(--border-light);
 }
 
 .btn-outline:hover {
-  border-color: var(--sap-blue-primary);
-  color: var(--sap-blue-primary);
-  background: var(--sap-blue-ice);
+  background: var(--bg-card);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 .btn-icon {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
 }
 
 .btn-icon:hover {
-  color: var(--sap-blue-primary);
-  border-color: var(--sap-blue-medium);
+  color: var(--text-primary);
+  border-color: var(--border-highlight);
 }
 
 .btn-block {
@@ -485,77 +344,17 @@ button {
 }
 
 /* ==========================================================================
-   SAP GUI Window Card Architecture
-   ========================================================================== */
-.sap-window-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--card-shadow);
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.sap-window-card:hover {
-  border-color: var(--border-highlight);
-  box-shadow: 0 6px 20px rgba(0, 56, 95, 0.12);
-}
-
-.sap-card-titlebar {
-  background: linear-gradient(to right, #00385f, #005088);
-  color: #ffffff;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  border-bottom: 2px solid var(--sap-gold);
-}
-
-.window-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--sap-gold);
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.window-title {
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.window-tcode {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2px 6px;
-  border-radius: var(--radius-xs);
-  color: #ffd875;
-}
-
-.card-body-padding {
-  padding: 24px;
-}
-
-/* ==========================================================================
-   Hero Section (SAP Signature Look)
+   Hero Section
    ========================================================================== */
 .hero-section {
-  padding: 60px 0 40px;
-  background: linear-gradient(to bottom, #dbe6f0 0%, var(--bg-primary) 100%);
+  padding: 70px 0 60px;
   border-bottom: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .hero-section {
-  background: linear-gradient(to bottom, #161e29 0%, var(--bg-primary) 100%);
 }
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
   align-items: center;
 }
 
@@ -563,111 +362,87 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px;
-  background: #e2f0d9;
-  border: 1px solid #a9d08e;
+  padding: 5px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-xs);
-  color: #276a3c;
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-[data-theme="dark"] .status-badge {
-  background: rgba(39, 106, 60, 0.25);
-  border-color: #276a3c;
-  color: #68d391;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: #276a3c;
-}
-
-[data-theme="dark"] .status-dot {
-  background: #68d391;
+  background: var(--text-primary);
 }
 
 .hero-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.15;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-family: var(--font-display);
   color: var(--text-primary);
+  letter-spacing: -0.5px;
 }
 
-.text-gradient {
-  color: var(--sap-blue-primary);
-}
-
-[data-theme="dark"] .text-gradient {
-  color: #479eeb;
+.text-highlight {
+  color: var(--text-secondary);
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .highlight {
-  color: var(--sap-blue-primary);
+  color: var(--text-primary);
   font-weight: 700;
-}
-
-[data-theme="dark"] .highlight {
-  color: #ffd875;
 }
 
 .hero-description {
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .tag-accent {
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
-  padding: 2px 7px;
+  background: var(--bg-pill);
+  color: var(--text-primary);
+  padding: 2px 8px;
   border-radius: var(--radius-xs);
-  font-weight: 700;
-  border: 1px solid #c8d8e8;
-}
-
-[data-theme="dark"] .tag-accent {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
-  border-color: rgba(27, 117, 208, 0.4);
+  font-weight: 600;
+  border: 1px solid var(--border-light);
 }
 
 .hero-quick-info {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .info-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 12px;
+  padding: 6px 14px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   font-size: 0.82rem;
   color: var(--text-secondary);
-  font-weight: 600;
 }
 
 .info-pill.clickable:hover {
-  border-color: var(--sap-blue-primary);
-  color: var(--sap-blue-primary);
+  border-color: var(--border-highlight);
+  color: var(--text-primary);
 }
 
 .hero-actions {
@@ -676,99 +451,89 @@ button {
   gap: 12px;
 }
 
-/* Profile Card in Hero */
+/* Profile Photo Card in Hero */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-card {
-  border-top: 3px solid var(--sap-gold);
+  width: 100%;
+  max-width: 390px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
 }
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border-color);
+.profile-card:hover {
+  border-color: var(--border-highlight);
 }
 
-.profile-avatar {
+.profile-image-container {
   position: relative;
-  width: 68px;
-  height: 68px;
-  background: linear-gradient(135deg, #002b49 0%, #004b80 100%);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--sap-gold);
+  width: 100%;
+  background: #000000;
+  overflow: hidden;
 }
 
-.avatar-initials {
-  font-size: 1.6rem;
-  font-weight: 800;
-  font-family: var(--font-display);
-  color: #ffffff;
+.profile-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 0.3s ease;
 }
 
-.sap-verified-badge {
+.profile-card:hover .profile-photo {
+  transform: scale(1.02);
+}
+
+.photo-overlay-badge {
   position: absolute;
-  bottom: -6px;
-  right: -6px;
-  background: var(--sap-gold);
-  color: #002b49;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
+  bottom: 12px;
+  left: 12px;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: 2px solid #ffffff;
+  gap: 6px;
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sap-verified-badge svg {
+.photo-overlay-badge svg {
   width: 14px;
   height: 14px;
 }
 
-.profile-titles h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 3px;
+.profile-details-box {
+  padding: 20px;
 }
 
-.profile-titles p {
+.profile-title-row {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: var(--text-primary);
+}
+
+.profile-role {
   font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-bottom: 6px;
-}
-
-.badge-cert {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.sap-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  background: var(--sap-gold);
-  color: #002b49;
-  border-radius: var(--radius-xs);
-}
-
-.s4-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
-  border: 1px solid #c0d4e5;
-  border-radius: var(--radius-xs);
-}
-
-[data-theme="dark"] .s4-pill {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
-  border-color: rgba(27, 117, 208, 0.3);
 }
 
 .profile-stats {
@@ -776,59 +541,50 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   text-align: center;
-  padding: 16px 24px;
-  background: var(--sap-blue-ice);
+  padding: 12px 0;
+  margin-bottom: 16px;
   border-bottom: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .profile-stats {
-  background: rgba(255, 255, 255, 0.03);
 }
 
 .stat-number {
   display: block;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   font-family: var(--font-display);
-  color: var(--sap-blue-primary);
-}
-
-[data-theme="dark"] .stat-number {
-  color: #479eeb;
+  color: var(--text-primary);
 }
 
 .stat-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .profile-highlights {
-  padding: 18px 24px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .highlight-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
 }
 
 .highlight-item svg {
-  width: 15px;
-  height: 15px;
-  color: #107e3e;
+  width: 14px;
+  height: 14px;
+  color: var(--text-primary);
   flex-shrink: 0;
 }
 
 .profile-footer {
-  padding: 14px 24px;
-  background: var(--bg-primary);
+  padding-top: 14px;
   border-top: 1px solid var(--border-color);
 }
 
@@ -836,50 +592,40 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 14px;
-  background: #ffffff;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
-  color: var(--sap-blue-primary);
+  color: var(--text-primary);
   font-size: 0.82rem;
-  font-weight: 700;
-}
-
-[data-theme="dark"] .credly-link {
-  background: #1c2635;
-  color: #ffd875;
+  font-weight: 600;
 }
 
 .credly-link:hover {
-  border-color: var(--sap-blue-primary);
-  background: var(--sap-blue-ice);
+  background: var(--bg-pill);
+  border-color: var(--border-highlight);
 }
 
 /* ==========================================================================
    Common Section Styles
    ========================================================================== */
 .section {
-  padding: 70px 0;
+  padding: 72px 0;
   position: relative;
 }
 
 .section-header {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .section-tag {
   display: inline-block;
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--sap-blue-primary);
-  margin-bottom: 6px;
-  font-family: var(--font-mono);
-}
-
-[data-theme="dark"] .section-tag {
-  color: #479eeb;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 
 .section-title {
@@ -898,11 +644,10 @@ button {
 }
 
 .title-bar {
-  width: 48px;
-  height: 3px;
-  background: var(--sap-gold);
+  width: 44px;
+  height: 2px;
+  background: var(--text-primary);
   margin: 14px auto 0;
-  border-radius: var(--radius-full);
 }
 
 .text-center {
@@ -917,6 +662,41 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 32px;
+}
+
+.about-card {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.about-card:hover {
+  border-color: var(--border-highlight);
+}
+
+.card-header-simple {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-pill);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header-simple h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .about-text {
@@ -938,49 +718,35 @@ button {
 
 .pillar-item {
   padding: 22px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
   text-align: center;
+  transition: var(--transition);
+}
+
+.pillar-item:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-2px);
 }
 
 .pillar-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   margin: 0 auto 12px;
-  border-radius: var(--radius-sm);
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
+  border-radius: var(--radius-xs);
+  background: var(--bg-pill);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-[data-theme="dark"] .pillar-icon {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
-}
-
 .pillar-item h4 {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.tcode-badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #8c5b00;
-  background: #fff3d4;
-  border: 1px solid #ffd875;
-  padding: 1px 8px;
-  border-radius: var(--radius-xs);
   margin-bottom: 8px;
-}
-
-[data-theme="dark"] .tcode-badge {
-  background: rgba(255, 174, 0, 0.15);
-  color: #ffbf33;
-  border-color: rgba(255, 174, 0, 0.3);
+  color: var(--text-primary);
 }
 
 .pillar-item p {
@@ -990,11 +756,11 @@ button {
 }
 
 /* ==========================================================================
-   Experience Section (Client Names Removed - Sectors Preserved)
+   Experience Section (Monochrome Timeline)
    ========================================================================== */
 .timeline {
   position: relative;
-  max-width: 920px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -1004,7 +770,7 @@ button {
   top: 10px;
   bottom: 10px;
   left: 20px;
-  width: 2px;
+  width: 1px;
   background: var(--border-color);
 }
 
@@ -1020,20 +786,31 @@ button {
 
 .timeline-dot {
   position: absolute;
-  left: 13px;
-  top: 20px;
-  width: 16px;
-  height: 16px;
+  left: 14px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: var(--bg-card);
-  border: 3px solid var(--sap-blue-primary);
+  background: var(--bg-primary);
+  border: 2px solid var(--border-light);
   z-index: 2;
 }
 
 .timeline-dot.current-role {
-  background: var(--sap-gold);
-  border-color: var(--sap-blue-dark);
-  box-shadow: 0 0 10px rgba(240, 171, 0, 0.6);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.timeline-card {
+  padding: 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.timeline-card:hover {
+  border-color: var(--border-highlight);
 }
 
 .role-header {
@@ -1045,64 +822,24 @@ button {
 .role-badge {
   display: inline-block;
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 3px 9px;
   border-radius: var(--radius-xs);
   margin-bottom: 8px;
+  background: var(--bg-pill);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
 }
 
 .role-badge.current {
-  background: #e2f0d9;
-  color: #276a3c;
-  border: 1px solid #a9d08e;
-}
-
-.role-badge.project {
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
-  border: 1px solid #b8cee0;
-}
-
-.role-badge.ams {
-  background: #f3e8fd;
-  color: #7b2cbf;
-  border: 1px solid #e0c8f9;
-}
-
-.role-badge.foundation {
-  background: #fff3d4;
-  color: #8c5b00;
-  border: 1px solid #ffd875;
-}
-
-[data-theme="dark"] .role-badge.current {
-  background: rgba(39, 106, 60, 0.3);
-  color: #68d391;
-  border-color: #276a3c;
-}
-
-[data-theme="dark"] .role-badge.project {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
-  border-color: rgba(27, 117, 208, 0.4);
-}
-
-[data-theme="dark"] .role-badge.ams {
-  background: rgba(123, 44, 191, 0.25);
-  color: #c084fc;
-  border-color: rgba(123, 44, 191, 0.4);
-}
-
-[data-theme="dark"] .role-badge.foundation {
-  background: rgba(255, 174, 0, 0.2);
-  color: #ffd875;
-  border-color: rgba(255, 174, 0, 0.4);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
 }
 
 .role-title {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 6px;
   color: var(--text-primary);
@@ -1118,22 +855,13 @@ button {
   gap: 6px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--sap-blue-primary);
-  background: var(--sap-blue-ice);
-  padding: 3px 10px;
-  border-radius: var(--radius-xs);
-  border: 1px solid #c5d5e5;
-}
-
-[data-theme="dark"] .sector-pill {
-  background: rgba(27, 117, 208, 0.15);
-  color: #479eeb;
-  border-color: rgba(27, 117, 208, 0.3);
+  color: var(--text-secondary);
 }
 
 .sector-pill svg {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
+  color: var(--text-muted);
 }
 
 .achievement-list {
@@ -1151,12 +879,11 @@ button {
 }
 
 .achievement-list li::before {
-  content: '■';
+  content: '—';
   position: absolute;
-  left: 2px;
-  top: 1px;
-  color: var(--sap-gold);
-  font-size: 0.65rem;
+  left: 0;
+  top: 0;
+  color: var(--text-muted);
 }
 
 .achievement-list li strong {
@@ -1172,9 +899,8 @@ button {
 .role-tag {
   font-size: 0.72rem;
   font-weight: 600;
-  font-family: var(--font-mono);
-  padding: 3px 8px;
-  background: var(--bg-primary);
+  padding: 3px 9px;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   color: var(--text-muted);
@@ -1188,9 +914,21 @@ button {
   margin: 0 auto;
 }
 
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.cert-card:hover {
+  border-color: var(--border-highlight);
+}
+
 .cert-content-inner {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 32px;
   padding: 32px;
 }
@@ -1201,47 +939,41 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .cert-badge-graphic {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #002b49 0%, #004b80 100%);
-  border: 4px solid var(--sap-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 43, 73, 0.2);
-}
-
-.cert-inner {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-highlight);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.sap-logo-text {
+.cert-badge-title {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 1px;
 }
 
-.cert-subtext {
+.cert-badge-sub {
   font-size: 0.65rem;
   letter-spacing: 2px;
-  font-weight: 800;
-  color: var(--sap-gold);
+  font-weight: 700;
+  color: var(--text-muted);
 }
 
 .cert-icon-center {
   margin-top: 4px;
-  color: var(--sap-gold);
-  width: 20px;
-  height: 20px;
+  color: var(--text-primary);
+  width: 18px;
+  height: 18px;
 }
 
 .credly-verified-pill {
@@ -1249,18 +981,12 @@ button {
   align-items: center;
   gap: 5px;
   font-size: 0.72rem;
-  font-weight: 700;
-  color: #276a3c;
-  background: #e2f0d9;
-  border: 1px solid #a9d08e;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-pill);
+  border: 1px solid var(--border-light);
   padding: 3px 10px;
   border-radius: var(--radius-xs);
-}
-
-[data-theme="dark"] .credly-verified-pill {
-  background: rgba(39, 106, 60, 0.3);
-  color: #68d391;
-  border-color: #276a3c;
 }
 
 .cert-info-col {
@@ -1270,21 +996,16 @@ button {
 }
 
 .cert-code {
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--sap-blue-primary);
   letter-spacing: 1px;
-  font-family: var(--font-mono);
+  color: var(--text-muted);
   margin-bottom: 4px;
 }
 
-[data-theme="dark"] .cert-code {
-  color: #ffd875;
-}
-
 .cert-name {
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 10px;
   line-height: 1.3;
@@ -1299,12 +1020,11 @@ button {
 }
 
 .cert-competencies h4 {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--text-muted);
   margin-bottom: 10px;
-  font-family: var(--font-mono);
 }
 
 .comp-grid {
@@ -1323,7 +1043,7 @@ button {
 }
 
 .comp-item svg {
-  color: #107e3e;
+  color: var(--text-primary);
   width: 14px;
   height: 14px;
   flex-shrink: 0;
@@ -1339,7 +1059,6 @@ button {
 .cert-badge-id {
   font-size: 0.72rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
 }
 
 /* ==========================================================================
@@ -1356,7 +1075,7 @@ button {
 .filter-btn {
   padding: 6px 16px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: var(--radius-xs);
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1364,20 +1083,59 @@ button {
 }
 
 .filter-btn:hover {
-  border-color: var(--sap-blue-primary);
-  color: var(--sap-blue-primary);
+  border-color: var(--border-highlight);
+  color: var(--text-primary);
 }
 
 .filter-btn.active {
-  background: var(--sap-blue-primary);
-  color: #ffffff;
-  border-color: var(--sap-blue-dark);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.skill-category-card {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.skill-category-card:hover {
+  border-color: var(--border-highlight);
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-pill);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .skill-pill-list {
@@ -1388,24 +1146,19 @@ button {
 
 .skill-pill {
   padding: 6px 12px;
-  background: var(--sap-blue-ice);
-  border: 1px solid #c9d8e6;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   font-size: 0.82rem;
-  color: var(--text-primary);
-  font-weight: 600;
+  color: var(--text-secondary);
+  font-weight: 500;
   transition: var(--transition);
 }
 
-[data-theme="dark"] .skill-pill {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--border-color);
-}
-
 .skill-pill:hover {
-  background: var(--sap-gold);
-  color: #002b49;
-  border-color: #d49700;
+  background: var(--bg-pill);
+  border-color: var(--border-highlight);
+  color: var(--text-primary);
   transform: translateY(-1px);
 }
 
@@ -1418,21 +1171,40 @@ button {
   gap: 20px;
 }
 
-.achievement-icon {
-  width: 44px;
-  height: 44px;
+.achievement-card {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
+  position: relative;
+  transition: var(--transition);
+}
+
+.achievement-card:hover {
+  border-color: var(--border-highlight);
+}
+
+.achievement-num {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  opacity: 0.12;
+  color: var(--text-primary);
+}
+
+.achievement-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-pill);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
-}
-
-[data-theme="dark"] .achievement-icon {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
 }
 
 .achievement-card h3 {
@@ -1470,23 +1242,26 @@ button {
   align-items: center;
   gap: 14px;
   padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  border-color: var(--border-highlight);
 }
 
 .contact-icon {
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-sm);
-  background: var(--sap-blue-ice);
-  color: var(--sap-blue-primary);
+  border-radius: var(--radius-xs);
+  background: var(--bg-pill);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-[data-theme="dark"] .contact-icon {
-  background: rgba(27, 117, 208, 0.2);
-  color: #479eeb;
 }
 
 .contact-details {
@@ -1499,7 +1274,6 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-muted);
-  font-family: var(--font-mono);
 }
 
 .contact-details .value {
@@ -1509,7 +1283,8 @@ button {
 }
 
 .contact-details .link:hover {
-  color: var(--sap-blue-primary);
+  color: var(--text-primary);
+  text-decoration: underline;
 }
 
 .tz-badge {
@@ -1518,11 +1293,17 @@ button {
   gap: 5px;
   font-size: 0.72rem;
   color: var(--text-muted);
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   padding: 3px 8px;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-color);
-  font-family: var(--font-mono);
+}
+
+.form-wrapper {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
 }
 
 .form-wrapper h3 {
@@ -1544,7 +1325,7 @@ button {
 .form-group label {
   display: block;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
   color: var(--text-secondary);
 }
@@ -1553,7 +1334,7 @@ button {
 .form-group textarea {
   width: 100%;
   padding: 9px 12px;
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   color: var(--text-primary);
@@ -1565,68 +1346,7 @@ button {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--sap-blue-primary);
-  box-shadow: 0 0 0 2px var(--sap-blue-ice);
-}
-
-/* ==========================================================================
-   SAP GUI Status Bar (Iconic Sticky Footer)
-   ========================================================================== */
-.sap-status-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 28px;
-  background: #001f35;
-  color: #b5c7d8;
-  font-size: 0.74rem;
-  font-family: var(--font-mono);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  z-index: 101;
-  display: flex;
-  align-items: center;
-}
-
-.status-bar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.status-light-green {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #28a745;
-  box-shadow: 0 0 6px #28a745;
-}
-
-.status-text {
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.status-panes {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.status-pane {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  padding-left: 10px;
-}
-
-.status-pane strong {
-  color: var(--sap-gold);
+  border-color: var(--text-primary);
 }
 
 /* ==========================================================================
@@ -1635,7 +1355,7 @@ button {
 .site-footer {
   border-top: 1px solid var(--border-color);
   padding: 36px 0 20px;
-  background: var(--bg-card);
+  background: var(--bg-secondary);
 }
 
 .footer-container {
@@ -1666,7 +1386,7 @@ button {
 }
 
 .footer-links a:hover {
-  color: var(--sap-blue-primary);
+  color: var(--text-primary);
 }
 
 .footer-bottom {
@@ -1684,7 +1404,7 @@ button {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-xs);
-  background: var(--bg-primary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   display: flex;
@@ -1693,8 +1413,8 @@ button {
 }
 
 .back-to-top-btn:hover {
-  color: var(--sap-blue-primary);
-  border-color: var(--sap-blue-primary);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
 }
 
 /* ==========================================================================
@@ -1702,11 +1422,11 @@ button {
    ========================================================================== */
 .toast {
   position: fixed;
-  bottom: 40px;
+  bottom: 24px;
   right: 24px;
-  background: #002b49;
-  border: 1px solid var(--sap-gold);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #d4d4d8;
   padding: 10px 18px;
   border-radius: var(--radius-xs);
   display: flex;
@@ -1714,7 +1434,7 @@ button {
   gap: 10px;
   font-size: 0.85rem;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1727,7 +1447,7 @@ button {
 }
 
 .toast-icon {
-  color: var(--sap-gold);
+  color: #000000;
   width: 18px;
   height: 18px;
 }
@@ -1740,12 +1460,9 @@ button {
     background: #ffffff !important;
     color: #000000 !important;
     font-size: 11pt;
-    padding-bottom: 0 !important;
   }
   
-  .sap-system-bar,
   .site-header,
-  .sap-status-bar,
   .hero-actions,
   .profile-footer,
   .skills-filter,
@@ -1758,17 +1475,14 @@ button {
     display: none !important;
   }
   
-  .sap-window-card {
+  .about-card,
+  .timeline-card,
+  .cert-card,
+  .skill-category-card,
+  .achievement-card {
     background: transparent !important;
-    border: 1px solid #cccccc !important;
+    border: 1px solid #dddddd !important;
     box-shadow: none !important;
-  }
-  
-  .sap-card-titlebar {
-    background: #00385f !important;
-    color: #ffffff !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
   }
   
   .timeline::before {
@@ -1797,6 +1511,15 @@ button {
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-quick-info {
+    justify-content: center;
+  }
+  
+  .hero-actions {
+    justify-content: center;
   }
   
   .cert-content-inner {
@@ -1831,21 +1554,13 @@ button {
 }
 
 @media (max-width: 768px) {
-  .sap-sys-right {
-    display: none;
-  }
-  
-  .sap-command-bar {
-    max-width: 100%;
-  }
-  
   .nav-menu {
     position: fixed;
-    top: 98px;
+    top: 68px;
     left: 0;
     right: 0;
-    background: #002b49;
-    border-bottom: 2px solid var(--sap-gold);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
     padding: 20px;
     transform: translateY(-150%);
     transition: transform 0.3s ease;
@@ -1858,7 +1573,7 @@ button {
 
   .nav-links {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     align-items: center;
   }
 
@@ -1867,7 +1582,7 @@ button {
   }
 
   .hero-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
@@ -1897,9 +1612,5 @@ button {
 
   .timeline-dot {
     left: 3px;
-  }
-  
-  .hide-mobile {
-    display: none;
   }
 }
