@@ -11,7 +11,7 @@ Hosted live on GitHub Pages.
 - **Certification:** [SAP Certified Application Associate – SAP S/4HANA Sales](https://www.credly.com/badges/622f8041-b036-4e99-8990-cd5ca49e2bb3/public_url)
 
 ## Key Features
-- **SAP Signature GUI Theme:** Authentic enterprise SAP GUI look & feel, featuring iconic SAP Blue & Gold styling, interactive Command Field (`/n...`), and sticky system status bar.
+- **Minimalist Monochrome Palette:** Refined black and grey combinations, clean typography, executive aesthetics.
 - **Enterprise Experience:** Comprehensive breakdown of projects across Healthcare & Biotechnology, Energy / Oil & Gas, Public Sector / Government, and Automotive Manufacturing.
 - **Interactive Skills Matrix:** Categorized filters for SAP SD, S/4HANA, Cross-Module Integration (FI/MM/WM/EWM), and Project Delivery.
 - **Official Credly Badge Verification:** Direct integration with official SAP Credly certificate.
