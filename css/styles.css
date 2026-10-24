@@ -347,11 +347,8 @@ img {
    Hero Section
    ========================================================================== */
 .hero-section {
-  padding: 56px 0;
+  padding: 80px 0 70px;
   border-bottom: 1px solid var(--border-color);
-  min-height: calc(80vh - 68px);
-  display: flex;
-  align-items: center;
 }
 
 .hero-container {
@@ -359,7 +356,6 @@ img {
   grid-template-columns: 1.25fr 0.75fr;
   gap: 48px;
   align-items: center;
-  width: 100%;
 }
 
 .hero-content {
@@ -367,14 +363,14 @@ img {
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
-  line-height: 1.1;
-  margin-top: 0;
-  margin-bottom: 8px;
+  line-height: 1.15;
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-family: var(--font-display);
   color: var(--text-primary);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.5px;
 }
 
 .text-highlight {
