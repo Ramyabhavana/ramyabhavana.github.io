@@ -1,6 +1,6 @@
 /**
  * Ramya Bhavana - Portfolio Interactive Logic
- * SAP Signature GUI Theme & Command Navigation
+ * Minimalist Monochrome Theme & Interaction
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // --- Dynamic Year ---
+  // --- Dynamic Current Year ---
   const yearElem = document.getElementById('current-year');
   if (yearElem) {
     yearElem.textContent = new Date().getFullYear();
@@ -36,18 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
   updateDallasTime();
   setInterval(updateDallasTime, 60000);
 
-  // --- Theme Toggle (SAP Signature Light / Dark Horizon) ---
+  // --- Theme Toggle (Monochrome Dark / Light) ---
   const themeToggleBtn = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('rb_sap_theme') || 'signature';
+  const savedTheme = localStorage.getItem('rb_theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
       const activeTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = activeTheme === 'dark' ? 'signature' : 'dark';
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('rb_sap_theme', newTheme);
-      showToast(newTheme === 'dark' ? 'Switched to SAP Horizon Dark' : 'Switched to SAP Signature Light');
+      localStorage.setItem('rb_theme', newTheme);
+      showToast(newTheme === 'dark' ? 'Switched to Dark Theme' : 'Switched to Light Theme');
       if (window.lucide) window.lucide.createIcons();
     });
   }
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.pageYOffset;
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
+      const sectionTop = current.offsetTop - 100;
       const sectionId = current.getAttribute('id');
       const navItem = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
       
@@ -126,73 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- SAP GUI Command Bar & T-Code Logic ---
-  const cmdInput = document.getElementById('sap-command-input');
-  const cmdGoBtn = document.getElementById('sap-command-go');
-  const tcodeChips = document.querySelectorAll('.tcode-chip');
-
-  function executeTCode(rawCode) {
-    if (!rawCode) return;
-    const code = rawCode.trim().toUpperCase().replace(/^\/N/, '');
-
-    const tcodeMap = {
-      'VA01': { target: '#skills', filter: 'sd', msg: 'Session 1: Order-to-Cash / Sales Documents (VA01)' },
-      'VA02': { target: '#skills', filter: 'sd', msg: 'Session 1: Sales Order Maintenance (VA02)' },
-      'VK11': { target: '#skills', filter: 'sd', msg: 'Session 1: Pricing Procedures & Condition Techniques (VK11)' },
-      'VL01N': { target: '#skills', filter: 'sd', msg: 'Session 1: Outbound Delivery & ATP Fulfillment (VL01N)' },
-      'VF01': { target: '#skills', filter: 'sd', msg: 'Session 1: Billing Processing & Invoicing (VF01)' },
-      'BP': { target: '#skills', filter: 's4', msg: 'Session 1: Business Partner & Customer Master (BP)' },
-      'SPRO': { target: '#skills', filter: 'all', msg: 'Session 1: SAP Customizing Implementation Guide (SPRO)' },
-      'ABOUT': { target: '#about', msg: 'Navigating to Executive Overview' },
-      'EXP': { target: '#experience', msg: 'Navigating to Enterprise Experience' },
-      'CERT': { target: '#certification', msg: 'Navigating to SAP Certification' },
-      'SKILLS': { target: '#skills', filter: 'all', msg: 'Navigating to Skills Matrix' },
-      'CONTACT': { target: '#contact', msg: 'Navigating to Contact Dispatcher' }
-    };
-
-    const match = tcodeMap[code];
-    if (match) {
-      if (match.filter) {
-        filterSkills(match.filter);
-      }
-      const el = document.querySelector(match.target);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-      showToast(`✔ ${match.msg}`);
-    } else {
-      // General search or jump
-      const targetSec = document.querySelector(`#${code.toLowerCase()}`);
-      if (targetSec) {
-        targetSec.scrollIntoView({ behavior: 'smooth' });
-        showToast(`✔ Navigating to #${code.toLowerCase()}`);
-      } else {
-        showToast(`ℹ T-Code "/n${code}" not recognized. Try VA01, VK11, VL01N, VF01, BP, or SPRO.`);
-      }
-    }
-
-    if (cmdInput) cmdInput.value = '';
-  }
-
-  if (cmdInput && cmdGoBtn) {
-    cmdGoBtn.addEventListener('click', () => {
-      executeTCode(cmdInput.value);
-    });
-
-    cmdInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        executeTCode(cmdInput.value);
-      }
-    });
-  }
-
-  tcodeChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const tcode = chip.getAttribute('data-tcode');
-      executeTCode(tcode);
-    });
-  });
-
   // --- Copy to Clipboard Toast ---
   const copyButtons = document.querySelectorAll('.copy-btn');
   const toast = document.getElementById('toast');
@@ -204,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 3200);
+    }, 3000);
   }
 
   copyButtons.forEach(btn => {
@@ -264,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
       )}`;
 
       window.location.href = mailtoUrl;
-      showToast('Opening your email client to dispatch message...');
+      showToast('Opening your email client...');
       e.preventDefault();
     });
   }
